@@ -1,0 +1,22 @@
+// Mixins
+@import './mixins';
+
+// Variables
+@import './variables';
+
+@import './fonts';
+@import './vendor';
+@import './general';
+
+// Components
+@import './components/header';
+@import './components/about-product';
+@import './components/offer';
+@import './components/clients';
+@import './components/footer';
+@import './components/overlay';
+@import './components/message-form';
+@import './components/message-error';
+@import './components/modal-window';
+
+@import './class-for-js';

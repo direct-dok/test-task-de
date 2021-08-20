@@ -1,0 +1,49 @@
+@mixin flex($alignItems, $justifyContent) {
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin font-s-line-h-letter-s($fontSize, $lineHeight, $letterSpacing) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+// Media query
+@mixin device-desktops {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin device-ipads-portrait {
+    @media (max-width: 1024px) {
+        @content;
+    }
+} 
+
+@mixin device-tablets-mobiles-landscape {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin device-mobiles {
+    @media (max-width: 481px) {
+        @content;
+    }
+}
+
+
+@mixin symbolList($selectors...) {
+    @for $i from 0 to length($selectors) {
+        &__contact-items:nth-child(#{($i + 1)})::before {
+            content: '#{nth($selectors, $i + 1)}';
+            @include font-s-line-h-letter-s(16px, 26px, 0.05em);
+            position: absolute;
+            left: -40px;
+            top: 0;
+        }
+    }
+}

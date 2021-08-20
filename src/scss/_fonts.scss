@@ -1,0 +1,14 @@
+@font-face {
+     font-family: "Galien Regular";
+     src: url("../fonts/Galien/Galien\ Regular.woff2") format("woff2"),
+          /* chrome、firefox */
+          url("../fonts/Galien/Galien\ Regular.woff") format("woff"),
+          /* chrome、firefox */
+}
+
+@font-face {
+     font-family: 'Gilroy';
+     src: local('Gilroy Regular'), local('Gilroy Regular'),
+          url('../fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'),
+          url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+}

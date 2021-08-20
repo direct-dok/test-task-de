@@ -1,0 +1,91 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 3;
+
+    @include device-tablets-mobiles-landscape {
+        width: 80%;
+    }
+
+    @include device-mobiles {
+        width: 90%;
+    }
+
+	&__wrapper {
+        padding: 40px 50px;
+
+        @include device-tablets-mobiles-landscape {
+            padding: 30px 40px;
+        }
+
+        @include device-mobiles {
+            padding: 40px 30px;
+        }
+    }
+
+	&__title {
+        @include font-s-line-h-letter-s(32px, 44px, 0.04em);
+        color: #316099;
+        margin: 0 0 20px 0;
+
+        @include device-mobiles {
+            @include font-s-line-h-letter-s(26px, 34px, 0.04em);
+        }
+    }
+
+	&__text {
+        @include font-s-line-h-letter-s(18px, 24px, 0.04em);
+        color: #1F3F68;
+        margin: 0 0 20px 0;
+        opacity: 0.6;
+
+        @include device-mobiles {
+            @include font-s-line-h-letter-s(16px, 22px, 0.04em);
+        }
+    }
+
+    &__button-wrapper {
+        text-align: right;
+    }
+
+	&__button {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #fff;
+        width: 220px;
+        height: 56px;
+        background: $blue-button;
+        border-radius: 10px;
+        border: none;
+
+        @include device-mobiles {
+            width: 180px;
+        }
+    }
+
+    &__button:hover {
+        cursor: pointer;
+    }
+
+	&__close-icon {
+        top: 15px;
+        right: 15px;
+
+        @include device-mobiles {
+            top: 5px;
+            right: 5px;
+        }
+    }
+
+}

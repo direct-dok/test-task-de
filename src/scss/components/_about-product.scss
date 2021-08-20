@@ -1,0 +1,58 @@
+.about-product {
+    
+
+	&__wrapper-content {
+        padding: 105px 0 190px 0;
+
+        @include device-tablets-mobiles-landscape {
+            padding: 70px 0;
+        }
+
+        @include device-mobiles {
+            padding: 30px 0;
+        }
+    }
+
+	&__content-block {
+        max-width: 510px;
+    }
+
+	&__caption {
+        font-family: "Galien Regular";
+        @include font-s-line-h-letter-s(64px, 74px, 0.04em);
+        color: #1F3F68;
+        margin: 0 0 32px 0;
+
+        @include device-mobiles {
+            @include font-s-line-h-letter-s(44px, 48px, 0.04em);
+        }
+    }
+
+	&__text-content {
+        @include font-s-line-h-letter-s(16px, 26px, 0.05em);
+        max-width: 425px;
+        margin: 0 0 71px 0;
+        color: #1F3F68;
+        opacity: 0.6;
+
+        @include device-mobiles {
+            margin: 0 0 32px 0;
+        }
+    }
+
+	&__button {
+        @include font-s-line-h-letter-s(16px, 26px, 0.04em);
+        color: #fff;
+        width: 220px;
+        height: 56px;
+        background: $blue-button;
+        box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+        border-radius: 10px;
+        border: none;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+    }
+
+}

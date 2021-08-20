@@ -1,0 +1,16 @@
+.message-error {
+    position: relative;
+    color: #a63d3d;
+    margin: 5px 0 0 0;
+    padding: 10px 40px 10px 20px;
+    background: #fcd4d4;
+    border-radius: 10px;
+}
+
+.message-error::after {
+    content: '\2139';
+    font-size: 34px;
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 20px;
+}

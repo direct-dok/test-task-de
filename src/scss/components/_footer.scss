@@ -1,0 +1,253 @@
+.footer {
+    position: relative;
+    background: $blue-button;
+    padding: 91px 0 64px 0;
+
+    @include device-mobiles {
+        padding: 21px 0 14px 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 96px;
+        background: #316099;
+        border-radius: 0px 200px 0px 0px;
+
+        @include device-ipads-portrait {
+            border-radius: 0px 60px 0px 0px;
+        }
+
+        @include device-mobiles {
+            right: 16px;
+        }
+    }
+    
+
+	&__wrapper {
+        // background: #316099;
+
+        // border-radius: 0px 200px 0px 0px;
+    }
+
+	&__header {
+        position: relative;
+        padding: 0 0 96px 0;
+
+        @include device-mobiles {
+            padding: 0 0 50px 0;
+        }
+    }
+
+	&__content {
+        max-width: 460px;
+
+        @include device-ipads-portrait {
+            max-width: 100%;
+        }
+    }
+
+    &__header-wrapper {
+        @include flex(center, space-between);
+        flex-wrap: wrap;
+    }
+    
+    &__header-wrapper, 
+    &__bottom-wrapper {
+        padding: 0 96px 0 0;
+
+        @include device-desktops {
+            padding: 0 146px 0 0;
+        }
+
+        @include device-mobiles {
+            padding: 0 66px 0 0;
+        }
+    }
+
+	&__caption {
+        @include font-s-line-h-letter-s(36px, 46px, 0.05em);
+        color: #fff;
+
+        @include device-tablets-mobiles-landscape {
+
+        }
+    }
+
+	&__description {
+        @include font-s-line-h-letter-s(16px, 26px, 0.05em);
+        color: #FFFFFF;
+        opacity: 0.6;
+    }
+
+	&__button-wrapper {
+        
+    }
+
+	&__button {
+        @include font-s-line-h-letter-s(16px, 26px, 0.04em);
+        color: #fff;
+        width: 220px;
+        height: 56px;
+        background: $blue-button;
+        border-radius: 10px;
+        border: none;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+    }
+
+	&__bottom {
+        position: relative;
+        padding: 96px 0 0 0;
+
+        @include device-mobiles {
+            padding: 40px 0 0 0;
+        }
+    }
+
+    &__horizontal-line-wrapper {
+        position: relative;
+    }
+
+    
+
+    &__horizontal-line {
+        height: 1px;
+        max-width: calc(100% - 96px);
+        background: #fff;
+        opacity: 0.4;
+
+        @include device-desktops {
+            max-width: calc(100% - 146px);
+        }
+
+        @include device-mobiles {
+            max-width: calc(100% - 66px);
+        }
+    }
+
+    &__horizontal-line::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        left: 0;
+        height: 1px;
+        background: #fff;
+    }
+
+    &__bottom-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 64px 0;
+
+        @include device-ipads-portrait {
+            margin: 0 0 34px 0;
+        }
+    }
+
+	&__contact {
+        max-width: 299px;
+        margin: 0 100px 30px 0;
+
+        @include device-ipads-portrait {
+            margin: 0 100px 30px 0;
+        }
+    }
+
+	&__logo {
+        display: flex;
+        align-items: center;
+        margin: 0 0 33px 0;
+    }
+
+    &__logo-icon {
+        margin: 0 20px 0 0;
+    }
+
+    &__logo-name {
+        @include font-s-line-h-letter-s(28px, 46px, 0.02em);
+        color: #fff;
+        margin: 0;
+    }
+
+	&__contact-item {
+        margin: 0;
+        list-style: none;
+    }
+
+	&__contact-items {
+        position: relative;
+        @include font-s-line-h-letter-s(16px, 26px, 0.05em);
+        color: #fff;
+        margin: 0 0 24px 0;
+    }
+
+    &__contact-items:last-child {
+        margin: 0;
+    }
+
+    @include symbolList('A.', 'T.', 'E');
+
+    &__contact-items-text {
+        margin: 0;
+    }
+
+	&__about {
+        margin: 0 77px 0 0;
+
+        @include device-tablets-mobiles-landscape {
+            margin: 0 77px 30px 0;
+        }
+    }
+
+	&__caption-links {
+        @include font-s-line-h-letter-s(20px, 30px, 0.05em);
+        color: #fff;
+        margin: 0 0 32px 0;
+    }
+
+	&__link-item {
+        padding: 0;
+        list-style: none;
+    }
+
+	&__link-items {
+        margin: 0 0 16px 0;
+    }
+
+    &__link-items:last-child {
+        margin: 0;
+    }
+
+	&__link-lists {
+        @include font-s-line-h-letter-s(16px, 26px, 0.05em);
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &__link-lists:hover {
+        text-decoration: underline;
+    }
+
+	&__follow {
+        
+    }
+
+    &__copyright {
+        position: relative;
+        @include font-s-line-h-letter-s(16px, 26px, 0.05em);
+        color: #FFFFFF;
+        padding-right: 96px;
+        opacity: 0.4;
+
+        @include device-mobiles {
+            padding-right: 26px;
+        }
+    }
+
+}

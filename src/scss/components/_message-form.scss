@@ -1,0 +1,205 @@
+.message-form {
+    // display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 540px;
+    padding: 56px;
+    background: #fff;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    
+
+    @include device-tablets-mobiles-landscape {
+        max-width: 85%;
+        padding: 44px;
+    }
+
+    @include device-mobiles {
+        max-width: 90%;
+        padding: 34px;
+    }
+
+	&__title {
+        @include font-s-line-h-letter-s(20px, 30px, 0.04em);
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #1F3F68;
+        margin: 0 0 48px;
+
+        @include device-tablets-mobiles-landscape {
+            margin: 0 0 22px;
+        }
+
+        @include device-mobiles {
+            @include font-s-line-h-letter-s(18px, 28px, 0.04em);
+            margin: 0;
+        }
+    }
+
+	&__field-items {
+        list-style: none;
+        padding: 0;
+    }
+
+	&__field-item {
+        margin: 0 0 32px 0;
+
+        @include device-tablets-mobiles-landscape {
+            margin: 0 0 16px 0;
+        }
+
+        @include device-mobiles {
+            margin: 0 0 8px 0;
+        } 
+    }
+
+    &__field-item:last-child {
+        margin: 0 0 72px 0;
+
+        @include device-tablets-mobiles-landscape {
+            margin: 0 0 38px 0;
+        }
+
+        @include device-mobiles {
+            margin: 0 0 24px 0;
+        }
+    }
+
+	&__label {
+        display: block;
+        @include font-s-line-h-letter-s(16px, 30px, 0.04em);
+        color: #1F3F68;
+        margin: 0 0 8px 0;
+        opacity: 0.8;
+        
+        @include device-mobiles {
+            @include font-s-line-h-letter-s(14px, 26px, 0.04em);
+        }
+
+        @include device-mobiles {
+            margin: 0 0 2px 0;
+        }
+    }
+
+	&__filed-form {
+        display: block;
+        @include font-s-line-h-letter-s(16px, 30px, 0.04em);
+        width: 100%;
+        height: 72px;
+        padding: 0 36px;
+        box-sizing: border-box;
+        border: 1px solid rgba(53, 110, 173, .4);
+        border-radius: 10px;
+        outline: none;
+
+        @include device-mobiles {
+            height: 56px;
+        }
+        
+    }
+
+    &__filed-form::placeholder {
+        color: #1F3F68;
+        opacity: 0.2;
+    }
+    
+    &__filed-form:focus {
+        border: 1px solid #356ead;
+    }
+
+
+	&__field-name {
+
+    }
+
+	&__field-email {
+
+    }
+
+	&__field-message {
+        height: 144px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+	&__submit-wrapper {
+
+    }
+
+	&__button {
+        @include font-s-line-h-letter-s(16px, 26px, 0.04em);
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
+        width: 100%;
+        height: 72px;
+        background: $blue-button;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        border: none;
+
+        @include device-mobiles {
+            height: 56px;
+        }
+    }
+
+    &__button:hover {cursor: pointer}
+
+    &__close-icon-wrapper {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(95, 63, 63, 0);
+        opacity: .7;
+
+        @include device-mobiles {
+            right: 15px;
+            top: 15px;
+        }
+
+        @include device-mobiles {
+            width: 33px;
+        }
+
+    }
+
+    &__close-icon-wrapper::before, 
+    &__close-icon-wrapper::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #1F3F68;
+
+        
+    }
+
+    &__close-icon-wrapper::before {
+        -moz-transform: translate(0px, 0px) rotate(45deg);
+        -webkit-transform: translate(0px, 0px) rotate(45deg);
+        -o-transform: translate(0px, 0px) rotate(45deg);
+        -ms-transform: translate(0px, 0px) rotate(45deg);
+        transform: translate(0px, 20px) rotate(45deg);
+    }
+
+    &__close-icon-wrapper::after {
+        transform: translate(0px, 20px) rotate(-45deg);
+    }
+
+    &__close-icon-wrapper:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: .3s;
+    }
+
+}
